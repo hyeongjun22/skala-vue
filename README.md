@@ -5,38 +5,40 @@
 ### 1. Vue 기초 문법 & 반응형 시스템 실습 (`src/components/practices/`)
 
 #### 📂 기초 문법 및 반응형 (`basic/`)
-| 파일명 | 학습 주제 | 주요 실습 내용 |
-| :--- | :--- | :--- |
-| **SampleOne.vue** | 반응성 기초 (`ref`) | 일반 변수와 `ref` 반응형 변수의 화면 갱신 차이 비교 |
-| **SampleTwo.vue** | 템플릿 문법 | 텍스트 보간법(`{{ }}`)과 자바스크립트 표현식 활용 |
-| **SampleThree.vue** | 클래스 바인딩 (`:class`) | 객체(`{ 'text-danger': isWarning }`) 및 배열 문법으로 동적 클래스 제어 |
-| **SampleFour.vue** | 스타일 바인딩 (`:style`) | 객체/배열 형태의 인라인 스타일 동적 바인딩 |
-| **SampleFive.vue** | 조건부 렌더링 (`v-if`) | `v-if`, `v-else-if`, `v-else` 상태별 화면 분기 |
-| **SampleSix.vue** | 조건부 표시 (`v-show`) | DOM 제거 없이 `display: none`으로 토글 제어 |
-| **SampleSeven.vue** | 이벤트 객체 (`$event`) | `v-on` 클릭 시 `$event` 마우스 좌표 및 대상 태그 추출 |
-| **SampleEight.vue** | 이벤트 핸들링 (`v-on`) | 인라인 연산(`count++`)과 script 함수 핸들러 연결 |
-| **SampleNine.vue** | 이벤트 수식어 | `@click.prevent`(기본 동작 차단), `@click.stop`(버블링 방지) |
-| **SampleTen.vue** | 양방향 바인딩 수식어 | `.lazy`, `.number`, `.trim` 수식어 실습 |
-| **SampleEleven.vue** | Form 요소 바인딩 | Textarea, Checkbox(단일/다중), Radio, Select 바인딩 |
-| **Sample12.vue** | `v-model` 동작 원리 | `:value` + `@input` 조합을 스크립트 함수로 분리하여 한글 처리 |
-| **Sample13.vue** | 계산된 속성 (`computed`) | 일반 메서드 호출과의 차이점 및 캐싱 동작 확인 |
-| **Sample14.vue** | 감시자 기초 (`watch`) | 단일 `ref` 감시 및 `newValue`, `oldValue` 파라미터 활용 |
-| **Sample15.vue** | 다중 감시 (`watch`) | 배열 형태로 여러 변수 묶어서 동시 감시 |
-| **Sample16.vue** | 깊은 감시 (`deep watch`) | 객체 내부 값 변경 감지를 위한 `{ deep: true }` 및 Getter 감시 |
-| **Sample17.vue** | 반응형 객체 감시 (`reactive`) | `reactive` 객체 전체 감시 vs 특정 속성(`() => state.prop`) 감시 |
-| **Sample18.vue** | 자동 감시자 (`watchEffect`) | 감시 대상 지정 없이 반응형 의존성 자동 추적 및 즉시 실행 |
-| **Sample19.vue** | 라이프사이클 훅 | `onMounted`, `onUpdated`, `onUnmounted` 흐름 및 `setInterval` 타이머 메모리 정리 |
+
+| 파일명               | 학습 주제                     | 주요 실습 내용                                                                   |
+| :------------------- | :---------------------------- | :------------------------------------------------------------------------------- |
+| **SampleOne.vue**    | 반응성 기초 (`ref`)           | 일반 변수와 `ref` 반응형 변수의 화면 갱신 차이 비교                              |
+| **SampleTwo.vue**    | 템플릿 문법                   | 텍스트 보간법(`{{ }}`)과 자바스크립트 표현식 활용                                |
+| **SampleThree.vue**  | 클래스 바인딩 (`:class`)      | 객체(`{ 'text-danger': isWarning }`) 및 배열 문법으로 동적 클래스 제어           |
+| **SampleFour.vue**   | 스타일 바인딩 (`:style`)      | 객체/배열 형태의 인라인 스타일 동적 바인딩                                       |
+| **SampleFive.vue**   | 조건부 렌더링 (`v-if`)        | `v-if`, `v-else-if`, `v-else` 상태별 화면 분기                                   |
+| **SampleSix.vue**    | 조건부 표시 (`v-show`)        | DOM 제거 없이 `display: none`으로 토글 제어                                      |
+| **SampleSeven.vue**  | 이벤트 객체 (`$event`)        | `v-on` 클릭 시 `$event` 마우스 좌표 및 대상 태그 추출                            |
+| **SampleEight.vue**  | 이벤트 핸들링 (`v-on`)        | 인라인 연산(`count++`)과 script 함수 핸들러 연결                                 |
+| **SampleNine.vue**   | 이벤트 수식어                 | `@click.prevent`(기본 동작 차단), `@click.stop`(버블링 방지)                     |
+| **SampleTen.vue**    | 양방향 바인딩 수식어          | `.lazy`, `.number`, `.trim` 수식어 실습                                          |
+| **SampleEleven.vue** | Form 요소 바인딩              | Textarea, Checkbox(단일/다중), Radio, Select 바인딩                              |
+| **Sample12.vue**     | `v-model` 동작 원리           | `:value` + `@input` 조합을 스크립트 함수로 분리하여 한글 처리                    |
+| **Sample13.vue**     | 계산된 속성 (`computed`)      | 일반 메서드 호출과의 차이점 및 캐싱 동작 확인                                    |
+| **Sample14.vue**     | 감시자 기초 (`watch`)         | 단일 `ref` 감시 및 `newValue`, `oldValue` 파라미터 활용                          |
+| **Sample15.vue**     | 다중 감시 (`watch`)           | 배열 형태로 여러 변수 묶어서 동시 감시                                           |
+| **Sample16.vue**     | 깊은 감시 (`deep watch`)      | 객체 내부 값 변경 감지를 위한 `{ deep: true }` 및 Getter 감시                    |
+| **Sample17.vue**     | 반응형 객체 감시 (`reactive`) | `reactive` 객체 전체 감시 vs 특정 속성(`() => state.prop`) 감시                  |
+| **Sample18.vue**     | 자동 감시자 (`watchEffect`)   | 감시 대상 지정 없이 반응형 의존성 자동 추적 및 즉시 실행                         |
+| **Sample19.vue**     | 라이프사이클 훅               | `onMounted`, `onUpdated`, `onUnmounted` 흐름 및 `setInterval` 타이머 메모리 정리 |
 
 #### 📂 컴포넌트 실습 (`lifecycle/`, `slot/`, `library/`)
-| 파일명 | 학습 주제 | 주요 실습 내용 |
-| :--- | :--- | :--- |
-| **LifecycleParent.vue / LifecycleChild.vue** | 생명주기 훅 실습 | `v-if` 토글로 자식 컴포넌트 마운트/언마운트 시 생명주기 동작 확인 |
-| **SlotDefaultParent.vue / SlotDefaultChild.vue** | 기본 슬롯 (Default Slot) | 자식 컴포넌트의 `<slot>` 위치에 부모 마크업 주입 |
-| **SlotNamedParent.vue / SlotNamedChild.vue** | 이름 있는 슬롯 (Named Slot) | `#header`, `#content`, `#footer` 등 이름별 슬롯 분기 주입 |
-| **SlotScopedParent.vue / SlotScopedChild.vue** | 범위 슬롯 (Scoped Slot) | 자식 컴포넌트 내부의 로컬 데이터를 `v-slot`으로 부모가 넘겨받아 렌더링 |
-| **AxiosWeather.vue** | Axios 단발성 GET 통신 | OpenWeatherMap API로 실시간 날씨 데이터 비동기 호출 및 상태 표시 |
-| **AxiosJson.vue** | REST API CRUD | JSONPlaceholder 가상 백엔드 대상 GET, POST, PUT, DELETE 실습 |
-| **ElementPlus.vue** | UI 컴포넌트 라이브러리 | Form, Input-Number, Rate, MessageBox, Progress 등 UI 부품 실습 |
+
+| 파일명                                           | 학습 주제                   | 주요 실습 내용                                                         |
+| :----------------------------------------------- | :-------------------------- | :--------------------------------------------------------------------- |
+| **LifecycleParent.vue / LifecycleChild.vue**     | 생명주기 훅 실습            | `v-if` 토글로 자식 컴포넌트 마운트/언마운트 시 생명주기 동작 확인      |
+| **SlotDefaultParent.vue / SlotDefaultChild.vue** | 기본 슬롯 (Default Slot)    | 자식 컴포넌트의 `<slot>` 위치에 부모 마크업 주입                       |
+| **SlotNamedParent.vue / SlotNamedChild.vue**     | 이름 있는 슬롯 (Named Slot) | `#header`, `#content`, `#footer` 등 이름별 슬롯 분기 주입              |
+| **SlotScopedParent.vue / SlotScopedChild.vue**   | 범위 슬롯 (Scoped Slot)     | 자식 컴포넌트 내부의 로컬 데이터를 `v-slot`으로 부모가 넘겨받아 렌더링 |
+| **AxiosWeather.vue**                             | Axios 단발성 GET 통신       | OpenWeatherMap API로 실시간 날씨 데이터 비동기 호출 및 상태 표시       |
+| **AxiosJson.vue**                                | REST API CRUD               | JSONPlaceholder 가상 백엔드 대상 GET, POST, PUT, DELETE 실습           |
+| **ElementPlus.vue**                              | UI 컴포넌트 라이브러리      | Form, Input-Number, Rate, MessageBox, Progress 등 UI 부품 실습         |
 
 ---
 
