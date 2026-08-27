@@ -6,39 +6,39 @@
 
 #### 📂 기초 문법 및 반응형 (`basic/`)
 
-| 파일명               | 학습 주제                     | 주요 실습 내용                                                                   |
-| :------------------- | :---------------------------- | :------------------------------------------------------------------------------- |
-| **SampleOne.vue**    | 반응성 기초 (`ref`)           | 일반 변수와 `ref` 반응형 변수의 화면 갱신 차이 비교                              |
-| **SampleTwo.vue**    | 템플릿 문법                   | 텍스트 보간법(`{{ }}`)과 자바스크립트 표현식 활용                                |
-| **SampleThree.vue**  | 클래스 바인딩 (`:class`)      | 객체(`{ 'text-danger': isWarning }`) 및 배열 문법으로 동적 클래스 제어           |
-| **SampleFour.vue**   | 스타일 바인딩 (`:style`)      | 객체/배열 형태의 인라인 스타일 동적 바인딩                                       |
-| **SampleFive.vue**   | 조건부 렌더링 (`v-if`)        | `v-if`, `v-else-if`, `v-else` 상태별 화면 분기                                   |
-| **SampleSix.vue**    | 조건부 표시 (`v-show`)        | DOM 제거 없이 `display: none`으로 토글 제어                                      |
-| **SampleSeven.vue**  | 이벤트 객체 (`$event`)        | `v-on` 클릭 시 `$event` 마우스 좌표 및 대상 태그 추출                            |
-| **SampleEight.vue**  | 이벤트 핸들링 (`v-on`)        | 인라인 연산(`count++`)과 script 함수 핸들러 연결                                 |
-| **SampleNine.vue**   | 이벤트 수식어                 | `@click.prevent`(기본 동작 차단), `@click.stop`(버블링 방지)                     |
-| **SampleTen.vue**    | 양방향 바인딩 수식어          | `.lazy`, `.number`, `.trim` 수식어 실습                                          |
-| **SampleEleven.vue** | Form 요소 바인딩              | Textarea, Checkbox(단일/다중), Radio, Select 바인딩                              |
-| **Sample12.vue**     | `v-model` 동작 원리           | `:value` + `@input` 조합을 스크립트 함수로 분리하여 한글 처리                    |
-| **Sample13.vue**     | 계산된 속성 (`computed`)      | 일반 메서드 호출과의 차이점 및 캐싱 동작 확인                                    |
-| **Sample14.vue**     | 감시자 기초 (`watch`)         | 단일 `ref` 감시 및 `newValue`, `oldValue` 파라미터 활용                          |
-| **Sample15.vue**     | 다중 감시 (`watch`)           | 배열 형태로 여러 변수 묶어서 동시 감시                                           |
-| **Sample16.vue**     | 깊은 감시 (`deep watch`)      | 객체 내부 값 변경 감지를 위한 `{ deep: true }` 및 Getter 감시                    |
-| **Sample17.vue**     | 반응형 객체 감시 (`reactive`) | `reactive` 객체 전체 감시 vs 특정 속성(`() => state.prop`) 감시                  |
-| **Sample18.vue**     | 자동 감시자 (`watchEffect`)   | 감시 대상 지정 없이 반응형 의존성 자동 추적 및 즉시 실행                         |
-| **Sample19.vue**     | 라이프사이클 훅               | `onMounted`, `onUpdated`, `onUnmounted` 흐름 및 `setInterval` 타이머 메모리 정리 |
+| 파일명 | 학습 주제 | 주요 실습 내용 |
+| :--- | :--- | :--- |
+| **SampleOne.vue** | 반응성 기초 (`ref`) | 일반 변수와 `ref` 반응형 변수의 화면 갱신 차이 비교 |
+| **SampleTwo.vue** | 템플릿 문법 | 텍스트 보간법(`{{ }}`)과 자바스크립트 표현식 활용 |
+| **SampleThree.vue** | 클래스 바인딩 (`:class`) | 객체(`{ 'text-danger': isWarning }`) 및 배열 문법으로 동적 클래스 제어 |
+| **SampleFour.vue** | 스타일 바인딩 (`:style`) | 객체/배열 형태의 인라인 스타일 동적 바인딩 |
+| **SampleFive.vue** | 조건부 렌더링 (`v-if`) | `v-if`, `v-else-if`, `v-else` 상태별 화면 분기 |
+| **SampleSix.vue** | 조건부 표시 (`v-show`) | DOM 제거 없이 `display: none`으로 토글 제어 |
+| **SampleSeven.vue** | 이벤트 객체 (`$event`) | `v-on` 클릭 시 `$event` 마우스 좌표 및 대상 태그 추출 |
+| **SampleEight.vue** | 이벤트 핸들링 (`v-on`) | 인라인 연산(`count++`)과 script 함수 핸들러 연결 |
+| **SampleNine.vue** | 이벤트 수식어 | `@click.prevent`(기본 동작 차단), `@click.stop`(버블링 방지) |
+| **SampleTen.vue** | 양방향 바인딩 수식어 | `.lazy`, `.number`, `.trim` 수식어 실습 |
+| **SampleEleven.vue** | Form 요소 바인딩 | Textarea, Checkbox(단일/다중), Radio, Select 바인딩 |
+| **Sample12.vue** | `v-model` 동작 원리 | `:value` + `@input` 조합을 스크립트 함수로 분리하여 한글 처리 |
+| **Sample13.vue** | 계산된 속성 (`computed`) | 일반 메서드 호출과의 차이점 및 캐싱 동작 확인 |
+| **Sample14.vue** | 감시자 기초 (`watch`) | 단일 `ref` 감시 및 `newValue`, `oldValue` 파라미터 활용 |
+| **Sample15.vue** | 다중 감시 (`watch`) | 배열 형태로 여러 변수 묶어서 동시 감시 |
+| **Sample16.vue** | 깊은 감시 (`deep watch`) | 객체 내부 값 변경 감지를 위한 `{ deep: true }` 및 Getter 감시 |
+| **Sample17.vue** | 반응형 객체 감시 (`reactive`) | `reactive` 객체 전체 감시 vs 특정 속성(`() => state.prop`) 감시 |
+| **Sample18.vue** | 자동 감시자 (`watchEffect`) | 감시 대상 지정 없이 반응형 의존성 자동 추적 및 즉시 실행 |
+| **Sample19.vue** | 라이프사이클 훅 | `onMounted`, `onUpdated`, `onUnmounted` 흐름 및 `setInterval` 타이머 메모리 정리 |
 
 #### 📂 컴포넌트 실습 (`lifecycle/`, `slot/`, `library/`)
 
-| 파일명                                           | 학습 주제                   | 주요 실습 내용                                                         |
-| :----------------------------------------------- | :-------------------------- | :--------------------------------------------------------------------- |
-| **LifecycleParent.vue / LifecycleChild.vue**     | 생명주기 훅 실습            | `v-if` 토글로 자식 컴포넌트 마운트/언마운트 시 생명주기 동작 확인      |
-| **SlotDefaultParent.vue / SlotDefaultChild.vue** | 기본 슬롯 (Default Slot)    | 자식 컴포넌트의 `<slot>` 위치에 부모 마크업 주입                       |
-| **SlotNamedParent.vue / SlotNamedChild.vue**     | 이름 있는 슬롯 (Named Slot) | `#header`, `#content`, `#footer` 등 이름별 슬롯 분기 주입              |
-| **SlotScopedParent.vue / SlotScopedChild.vue**   | 범위 슬롯 (Scoped Slot)     | 자식 컴포넌트 내부의 로컬 데이터를 `v-slot`으로 부모가 넘겨받아 렌더링 |
-| **AxiosWeather.vue**                             | Axios 단발성 GET 통신       | OpenWeatherMap API로 실시간 날씨 데이터 비동기 호출 및 상태 표시       |
-| **AxiosJson.vue**                                | REST API CRUD               | JSONPlaceholder 가상 백엔드 대상 GET, POST, PUT, DELETE 실습           |
-| **ElementPlus.vue**                              | UI 컴포넌트 라이브러리      | Form, Input-Number, Rate, MessageBox, Progress 등 UI 부품 실습         |
+| 파일명 | 학습 주제 | 주요 실습 내용 |
+| :--- | :--- | :--- |
+| **LifecycleParent.vue / LifecycleChild.vue** | 생명주기 훅 실습 | `v-if` 토글로 자식 컴포넌트 마운트/언마운트 시 생명주기 동작 확인 |
+| **SlotDefaultParent.vue / SlotDefaultChild.vue** | 기본 슬롯 (Default Slot) | 자식 컴포넌트의 `<slot>` 위치에 부모 마크업 주입 |
+| **SlotNamedParent.vue / SlotNamedChild.vue** | 이름 있는 슬롯 (Named Slot) | `#header`, `#content`, `#footer` 등 이름별 슬롯 분기 주입 |
+| **SlotScopedParent.vue / SlotScopedChild.vue** | 범위 슬롯 (Scoped Slot) | 자식 컴포넌트 내부의 로컬 데이터를 `v-slot`으로 부모가 넘겨받아 렌더링 |
+| **AxiosWeather.vue** | Axios 단발성 GET 통신 | OpenWeatherMap API로 실시간 날씨 데이터 비동기 호출 및 상태 표시 |
+| **AxiosJson.vue** | REST API CRUD | JSONPlaceholder 가상 백엔드 대상 GET, POST, PUT, DELETE 실습 |
+| **ElementPlus.vue** | UI 컴포넌트 라이브러리 | Form, Input-Number, Rate, MessageBox, Progress 등 UI 부품 실습 |
 
 ---
 
@@ -46,118 +46,83 @@
 
 #### 🌤️ 1) 과제 1: Weather Mockup ([Weather_Mockup.vue](src/components/practices/assignments/01_weather_mockup/Weather_Mockup.vue))
 
-- **교재**: PDF 116p (Hands on - Weather Mockup)
 - **진행한 내용**:
-  - `weatherList` 배열을 `v-for`로 돌려서 날씨 카드 목록 렌더링 (`:key="item.id"`)
-  - 기온 25도 기준으로 `v-if` 써서 더움/선선함 뱃지 띄우기
-  - 한글 검색할 때 글자 밀리는 문제 때문에 `v-model` 대신 `:value`랑 `@input` 조합으로 처리
-  - 카드 누르면 아래 상태바에 선택한 도시 뜨게 하고, 상세보기 버튼 누를 땐 카드 클릭이랑 안 겹치게 `@click.stop`으로 버블링 막고 `alert()` 띄움
-  - **[추가]**: 검색창에서 엔터 누르면 검색 결과 상태바에 뜨도록 `@keyup.enter` 추가하고, 제주/강릉 데이터 추가
+  weatherList 배열을 v-for로 돌려서 날씨 카드 목록 렌더링하였고 v-if 써서 더움/선선함을 표시했다. 한글을 검색할 때 글자가 밀리는 문제 때문에 v-model 대신 :value랑 @input를 사용하였다.
+  상세보기 버튼을 누를 땐 카드 클릭이랑 안 겹치게 @click.stop으로 버블링을 막고 alert()을 띄움
+
+  추가적으로 검색창에서 엔터 누르면 검색 결과가 상태바에 뜨도록 @keyup.enter 추가하였다.
+
 - **느낀 점**:
-  - 카드 안에 상세보기 버튼이 있어서 버튼을 누르면 부모 카드의 클릭 이벤트까지 같이 터지는 문제가 있었는데, `@click.stop` 하나 붙이니까 바로 해결돼서 이벤트 버블링 막는 법을 확실히 배웠다.
-  - 한글 입력할 때 한 박자씩 늦게 반응하는 현상이 왜 일어나는지, `:value` + `@input`으로 어떻게 잡는지 알게 됨.
+  이번 실습을 통해 이벤트 버블링 막는 법을 배웠고 한글을 입력할 때 한글자씩 늦게 반응하는 현상이 왜 일어나는지, :value + @input 으로 해결하면 된다는것을 알게되었다.
 
 ---
 
 #### ⚡ 2) 과제 2: Weather Composition ([Weather_Composition.vue](src/components/practices/assignments/02_weather_composition/Weather_Composition.vue))
 
-- **교재**: PDF 145p (Hands on - Weather Composition)
 - **진행한 내용**:
-  - `searchQuery`, `selectedCityInfo`, `weatherList`를 `ref()`로 선언해서 반응형으로 관리
-  - 검색창에 도시 이름 칠 때마다 실시간으로 목록 걸러지도록 `computed()`로 `filteredWeatherList` 구현 (결과 없을 땐 안내 문구 표시)
-  - `watch`로 상태바 문구 바뀔 때마다 콘솔 찍고, `watchEffect`로 검색어 입력할 때마다 실시간 로그 남김
-  - **[추가]**: 전체 도시 평균 기온 계산하는 `averageTemp` computed 추가
+  searchQuery, selectedCityInfo, weatherList를 ref()로 선언하여 반응형 상태로 관리하였다. 검색창에 도시 이름을 입력할 때마다 실시간으로 목록이 걸러지도록 computed()로 filteredWeatherList를 구현하였고, watch와 watchEffect를 활용해 상태 문구와 실시간 검색어 로그를 추적하였다.
+
+  추가적으로 전체 도시의 평균 기온을 실시간 계산해주는 averageTemp를 computed로 추가하였다.
+
 - **느낀 점**:
-  - 검색 필터링을 일반 함수가 아니라 `computed`로 만들어두니까 검색어가 바뀔 때만 알아서 다시 계산해주고 캐싱도 돼서 엄청 편했다.
-  - `watch`는 이전 값이랑 비교할 때 쓰고 `watchEffect`는 안에서 쓴 반응형 변수를 알아서 잡아주니까, 실시간 검색 로그처럼 즉각 반응해야 하는 곳엔 `watchEffect`가 훨씬 쓰기 편하다는 걸 느낌.
+  함수를 매번 호출하지 않고 computed를 쓰면 종속된 값이 바뀔 때만 알아서 다시 계산되고 캐싱까지 된다는 점이 편했다. 또한 watch와 watchEffect의 차이점을 직접 콘솔 로그를 찍어보며 확실히 익힐 수 있었다.
 
 ---
 
 #### 🧩 3) 과제 3: Weather Component ([WeatherParent.vue](src/components/practices/assignments/03_weather_component/WeatherParent.vue))
 
-- **교재**: PDF 178p (Hands on - Weather Component)
 - **진행한 내용**:
-  - 한 파일에 다 들어있던 코드를 역할별로 컴포넌트 4개(`WeatherParent`, `BaseDashboardCard`, `SearchBar`, `WeatherCard`)로 분리
-  - `BaseDashboardCard`: 공통 카드 박스 스타일만 잡고 안에 들어갈 내용은 `<slot>`으로 뚫어둠
-  - `SearchBar`: 부모한테서 `:query` 받고 타이핑할 때마다 `update-query` 이벤트 `emit`
-  - `WeatherCard`: 도시 객체 `:item` 받아서 카드 그리고 클릭/상세보기 이벤트 부모로 `emit`
-  - `WeatherParent`: 전체 데이터랑 상태(`searchQuery`, `filteredWeatherList`)를 관리하면서 자식 컴포넌트들을 Slot 안에 조립
-  - **[추가]**:
-    - 검색창에 글자 있을 때 한 번에 싹 지울 수 있는 `✕` 초기화 버튼 추가 (`v-if` + `@click`)
-    - 하단 상태바도 재사용하기 좋게 `WeatherStatusBar` 컴포넌트로 분리
+  한 파일에 모여있던 코드를 WeatherParent, BaseDashboardCard, SearchBar, WeatherCard 4개의 컴포넌트로 분리하였다. BaseDashboardCard는 slot을 뚫어 공통 카드 틀로 재사용하였고, 자식 컴포넌트들은 props와 emit으로 부모와 데이터를 주고받도록 구조화하였다.
+
+  추가적으로 검색창에 글자가 있을 때 한 번에 지울 수 있는 ✕ 초기화 버튼과 하단 상태바 컴포넌트를 분리 추가하였다.
+
 - **느낀 점**:
-  - 파일 하나로 짤 때는 편했는데 컴포넌트로 쪼개려니까 props랑 emit 맞추는 게 처음엔 헷갈렸다. 근데 쪼개고 나니까 데이터는 `WeatherParent` 한 곳에서만 쥐고 있고 자식은 뷰만 그리니까 코드가 훨씬 덜 꼬이고 깔끔해짐.
-  - 특히 `BaseDashboardCard`에 `<slot>`을 뚫어두니까 똑같은 카드 디자인을 검색창에도 쓰고 날씨 목록에도 그대로 재사용할 수 있어서 슬롯의 편리함을 제대로 이해했다.
+  컴포넌트로 분리하면서 처음엔 props와 emit 흐름이 조금 헷갈렸지만, 데이터 관리를 부모 한곳에 모으고 자식은 화면 렌더링에만 집중시키니 코드가 훨씬 깔끔해졌다. 특히 slot을 활용해 공통 카드 디자인을 재사용하는 방식을 배울 수 있었다.
 
 ---
 
 #### 🚀 4) 과제 4: Weather Router ([04_weather_router](src/components/practices/assignments/04_weather_router/))
 
-- **교재**: PDF 196~197p (Hands on - Weather Router)
 - **진행한 내용**:
-  - **Vue Router 설정 (`router/index.js`)**: 모든 뷰 컴포넌트에 지연 로딩(`() => import(...)`)을 걸어두고, 없는 경로 처리용 Catch-all(`/:pathMatch(.*)*`) 라우트 추가
-  - **네비게이션 & 레이아웃 (`App.vue`)**: `<RouterLink>`로 상단 메뉴바(대시보드, 기상 통계, 서비스 소개)를 두고 `<RouterView />`로 동적 페이지 화면 전환
-  - **메인 뷰 (`WeatherHomeView.vue`)**: 상세보기 버튼 클릭 시 `window.alert()` 대신 `router.push('/weather/' + id)`를 써서 상세 화면으로 이동
-  - **상세 뷰 (`WeatherDetailView.vue`)**: `:cityId` 동적 파라미터(`useRoute().params.cityId`)를 받아와 해당 도시의 상세 기상 정보(습도, 풍속, 미세먼지 등) 출력 및 뒤로가기 버튼
-  - **소개 뷰 (`WeatherAboutView.vue`)**: 프로젝트 소개 정적 페이지 및 홈 이동 버튼
-  - **404 뷰 (`NotFoundView.vue`)**: 잘못된 URL 입력 시 안내 페이지 출력
-  - **[추가 뷰] 기상 통계 (`WeatherStatsView.vue`)**: 전국 평균/최고/최저 기온 및 순위 랭킹을 보여주는 `/stats` 추가 라우트 구현
+  Vue Router를 도입하여 페이지 새로고침 없이 상단 메뉴(대시보드, 기상 통계, 서비스 소개)를 누르면 화면만 렌더링되도록 SPA를 구성하였다. 메인 카드에서 상세보기 버튼을 누르면 router.push()로 이동하고, 상세 페이지에서는 :cityId 파라미터를 받아 해당 도시의 정보를 동적으로 보여주도록 처리하였다.
+
+  추가적으로 전국 기온 통계와 랭킹을 볼 수 있는 /stats 라우트와 잘못된 주소 접근 시 띄워주는 NotFound(404) 페이지를 구현하였다.
+
 - **느낀 점**:
-  - `<a>` 태그 대신 `<RouterLink>`와 `<RouterView>`를 쓰니까 페이지를 매번 새로고침하지 않고도 가상 DOM에서 화면만 쏙쏙 바뀌는 SPA의 매력을 제대로 느꼈다.
-  - 상세보기 누르면 `router.push()`로 주소 넘기고, 상세 페이지에서 `useRoute()`로 `cityId` 뽑아서 그 도시 데이터만 골라 보여주는 동적 라우팅の流れ를 직접 만들어보면서 라우터의 핵심 원리를 잡을 수 있었음.
+  일반 a 태그와 달리 RouterLink와 RouterView를 쓰면 새로고침 없이 화면이 부드럽게 전환되는 SPA 구조를 이해하게 되었다. 동적 라우팅을 통해 URL 파라미터로 도시 ID를 넘겨받아 상세 화면을 그리는 흐름을 배울 수 있었다.
 
 ---
 
-#### 🏪 5) 과제 5: Weather Store ([05_weather_store](src/components/practices/assignments/05_weather_store/), [stores/configStore.js](src/stores/configStore.js))
+#### 🏪 5) 과제 5: Weather Store ([05_weather_store](src/components/practices/assignments/05_weather_store/))
 
-- **교재**: PDF 212p (Hands on - Weather Store)
 - **진행한 내용**:
-  - **Pinia 전역 스토어 (`stores/configStore.js`)**: 단위 상태(`unit`: 'celsius' / 'fahrenheit'), 기호 getter(`unitSymbol`: '℃' / '℉'), 단위 토글 action(`toggleUnit`), 온도 환산 헬퍼(`convertTemp`) 정의
-  - **단위 변경 컴포넌트 (`UnitToggler.vue`)**: 상단 네비게이션 바 우측에 배치하여 실시간으로 단위를 변경하는 UI 버튼 구현
-  - **전역 반응형 상태 연동**:
-    - `WeatherCard`: 스토어의 `unit` 상태에 따라 메인 카드의 온도를 섭씨/화씨로 자동 환산하여 `unitSymbol`과 함께 표시
-    - `WeatherDetailView`: 상세 페이지의 메인 기온 수치도 스토어 단위에 맞춰 동적으로 계산
-    - `WeatherStatsView`: 전국 평균 기온, 최고/최저 기온, 랭킹 목록에도 동일하게 스토어 단위 연동
+  Pinia를 이용해 configStore를 생성하고 온도 단위 상태(unit)와 기호(unitSymbol), 단위 변환 함수(convertTemp)를 전역으로 관리하였다. 상단 네비게이션에 UnitToggler 버튼을 배치하여 버튼 클릭 시 섭씨(℃)와 화씨(℉)가 토글되도록 하였다.
+
+  추가적으로 메인 날씨 카드뿐만 아니라 상세 페이지와 전국 통계 페이지의 모든 기온 수치도 전역 스토어의 단위에 맞춰 일제히 환산되도록 연동하였다.
+
 - **느낀 점**:
-  - 부모-자식 관계가 아니거나 깊이 떨어진 컴포넌트들끼리 props를 여러 다리 거쳐 넘겨줄 필요 없이, Pinia 스토어 하나에 상태를 올려두고 필요한 곳에서 `useConfigStore()`로 바로 꺼내 쓰니까 코드가 훨씬 간결해졌다.
-  - 상단에서 '단위 변경' 버튼을 한 번 눌렀을 때 메인 리스트, 상세 페이지, 통계 페이지까지 모든 온도가 일제히 화씨/섭씨로 실시간 바뀌는 걸 보면서 전역 상태 관리의 편리함을 제대로 체감함.
+  부모-자식 간에 props를 여러 다리 거쳐 전달할 필요 없이, Pinia 스토어 하나에 상태를 올려두고 필요한 컴포넌트에서 꺼내 쓰니 상태 관리가 훨씬 수월했다. 전역 상태를 바꾸면 이를 참조하는 모든 화면이 즉시 함께 갱신되는 반응형의 편리함을 배웠다.
 
 ---
 
 #### 🌐 6) 과제 6: Weather Axios ([06_weather_axios](src/components/practices/assignments/06_weather_axios/))
 
-- **교재**: PDF 230p (Hands on - Weather Axios)
 - **진행한 내용**:
-  - **Axios 라이브러리 설치**: `npm install axios`로 비동기 HTTP 통신 환경 구성
-  - **OpenWeatherMap API 연동**: 전달받은 API 키를 적용하여 서울, 수원, 부산, 제주, 강릉 5개 도시의 실시간 기상 데이터를 비동기 병렬(`Promise.all`)로 호출
-  - **메인 뷰 (`WeatherHomeView.vue`)**: 실제 위성 날씨 데이터(현재 기온, 기상 상태, 날씨 아이콘 이미지)를 받아와 렌더링하고, 로딩 상태(`isLoading`) 및 새로고침(🔄) 기능 구현
-  - **[기타 외부 API 추가] 오늘의 명언 & 조언 API (`Advice Slip REST API`)**: OpenWeatherMap 외에 추가 외부 API로 `https://api.adviceslip.com/advice`를 연동하여, 날씨 대시보드 상단에 실시간 라이프 조언/명언을 띄우고 `🎲 다른 조언 뽑기` 버튼으로 언제든 새로운 조언을 받아올 수 있도록 기능 확장
-  - **상세 뷰 (`WeatherDetailView.vue`)**: `:cityId`로 전달받은 도시의 실시간 상세 관측치(현재 기온, 체감 온도, 습도, 풍속, 기압, 대형 날씨 아이콘)를 외부 API로부터 단일 호출하여 카드 그리드로 시각화
-  - **통계 뷰 (`WeatherStatsView.vue`)**: 실제 5개 도시 데이터를 기반으로 전국 실시간 평균 기온, 최고/최저 기온 도시, 랭킹을 산출하고 `configStore` 단위 변환 연동
-  - **예외 처리 (Error Handling)**: `try ... catch` 구문으로 네트워크 오류 및 API 키 활성화 대기 상황에 대응
+  Axios를 설치하고 발급받은 OpenWeatherMap API 키를 연동하여 서울, 수원, 부산, 제주, 강릉 5개 도시의 실시간 기상 관측 데이터를 Promise.all로 병렬 호출하였다. 데이터 수신 중에는 isLoading으로 로딩 상태를 표시하고, try-catch로 통신 에러를 처리하였다.
+
+  추가적으로 외부 조언 API(Advice Slip API)를 연동하여 날씨 맞춤 외출 팁과 글로벌 명언을 실시간으로 가져오는 기능을 추가하였다.
+
 - **느낀 점**:
-  - 지금까지는 코드 안에 적어둔 가짜(Mock) 데이터로만 실습했었는데, `axios.get()` 한 줄로 실제 위성에서 관측한 오늘 서울/부산 기온과 날씨 아이콘 이미지가 화면에 뜨는 걸 보니까 진짜 살아있는 서비스를 만든 것 같아서 엄청 뿌듯했다.
-  - OpenWeatherMap 말고도 Advice Slip API 같은 다른 외부 오픈 API를 추가로 연동해보면서, 하나의 프론트엔드 앱 안에서 여러 개의 서로 다른 백엔드 서버와 비동기로 데이터를 주고받는 멀티 API 통신 방식을 익힐 수 있었다.
-  - 외부 서버랑 통신할 때는 데이터를 받아오기 전까지 찰나의 대기 시간이 생기는데, `isLoading` 반응형 변수를 둬서 로딩 안내를 띄우고 `try...catch`로 실패했을 때 안내 메시지를 보여주는 예외 처리의 중요성을 배웠다.
+  가짜(Mock) 데이터가 아니라 실제 위성 날씨 데이터를 axios로 가져와 화면에 렌더링해보니 진짜 웹 서비스를 만드는 느낌이 들었다. 외부 서버와 비동기 통신을 할 때 로딩 상태 처리와 try-catch 예외 처리의 중요성을 알게 되었다.
 
 ---
 
 #### 🎨 7) 과제 7: Weather UI Library ([07_weather_ui_library](src/components/practices/assignments/07_weather_ui_library/))
 
-- **교재**: PDF 249p (Hands on - Weather UI Library)
 - **진행한 내용**:
-  - **Element Plus 라이브러리 도입**: `npm install element-plus` 후 `main.js`에 전역 등록 및 테마 CSS 연동
-  - **컴포넌트 현대화**:
-    - `BaseDashboardCard`: `<el-card shadow="hover">`로 교체하여 부드러운 그림자와 둥근 모서리 디자인 적용
-    - `SearchBar`: `<el-input size="large" clearable>`로 교체하여 한 번에 검색어를 비울 수 있는 인터랙션 적용
-    - `WeatherCard`: `<el-tag>` 뱃지(더움/선선함)와 `<el-button>`으로 카드 시각화
-    - `UnitToggler`: 단위 전환 시 `ElMessage.info()` 토스트 알림 팝업 연동
-  - **뷰 고도화**:
-    - `WeatherHomeView`: 조언 알림창(`<el-alert>`), 로딩 스켈레톤(`<el-skeleton>`), 빈 검색 결과 화면(`<el-empty>`), 새로고침 완료 토스트(`<ElMessage.success>`) 적용
-    - `WeatherDetailView`: `<el-descriptions>`로 상세 관측 지표 표를 깔끔하게 정돈하고, 실시간 습도 수치를 게이지 바(`<el-progress>`)로 시각화
-    - `WeatherStatsView`: 전국 기온 지표 통계 카드(`<el-statistic>`)와 스트라이프 랭킹 테이블(`<el-table>`)로 전면 개편
-    - `WeatherAboutView`: 프로젝트 1일차부터 7일차까지의 발전 과정을 타임라인(`<el-timeline>`)으로 시각화
-    - `NotFoundView`: `<el-result icon="warning">` 404 상태 페이지 적용
+  Element Plus UI 라이브러리를 설치하고 전역 등록하여 기본 HTML 태그들을 완성형 UI 컴포넌트로 교체하였다. el-card로 카드 그림자를 주고, el-input(clearable), el-tag, el-button, el-descriptions, el-statistic, el-table 등을 적용하여 대시보드 화면을 전면 고도화하였다.
+
+  추가적으로 상세 화면에 습도 수치를 직관적인 el-progress 게이지 바로 시각화하고, 실시간 한국 표준시 시계와 날씨 상태별 다이내믹 컬러 테마를 적용하였다.
+
 - **느낀 점**:
-  - 일일이 CSS를 짜지 않고도 Element Plus의 완성형 컴포넌트들을 가져다 조립하니까 개발 속도가 훨씬 빨라지고, 순식간에 전문 디자이너가 작업한 것 같은 엔터프라이즈급 대시보드 느낌이 났다.
-  - 특히 상세 화면에서 습도를 `<el-progress>` 게이지 바로 보여주고, 데이터 로딩 중에 `<el-skeleton>` 애니메이션이 뜨는 걸 보면서 왜 실무에서 UI 라이브러리를 적극적으로 쓰는지 제대로 체감했다.
+  일일이 CSS를 직접 짜지 않고도 Element Plus 컴포넌트들을 활용하니 개발 속도가 훨씬 빨라지고 완성도 높은 대시보드를 만들 수 있었다. 실무에서 왜 UI 라이브러리를 적극적으로 활용하는지 직접 체감할 수 있었다.
