@@ -36,6 +36,7 @@
 | **SlotScopedParent.vue / SlotScopedChild.vue** | 범위 슬롯 (Scoped Slot) | 자식 컴포넌트 내부의 로컬 데이터를 `v-slot`으로 부모가 넘겨받아 렌더링 |
 | **AxiosWeather.vue** | Axios 단발성 GET 통신 | OpenWeatherMap API로 실시간 날씨 데이터 비동기 호출 및 상태 표시 |
 | **AxiosJson.vue** | REST API CRUD | JSONPlaceholder 가상 백엔드 대상 GET, POST, PUT, DELETE 실습 |
+| **ElementPlus.vue** | UI 컴포넌트 라이브러리 | Form, Input-Number, Rate, MessageBox, Progress 등 UI 부품 실습 |
 
 ---
 
@@ -136,3 +137,25 @@
   - 지금까지는 코드 안에 적어둔 가짜(Mock) 데이터로만 실습했었는데, `axios.get()` 한 줄로 실제 위성에서 관측한 오늘 서울/부산 기온과 날씨 아이콘 이미지가 화면에 뜨는 걸 보니까 진짜 살아있는 서비스를 만든 것 같아서 엄청 뿌듯했다.
   - OpenWeatherMap 말고도 Advice Slip API 같은 다른 외부 오픈 API를 추가로 연동해보면서, 하나의 프론트엔드 앱 안에서 여러 개의 서로 다른 백엔드 서버와 비동기로 데이터를 주고받는 멀티 API 통신 방식을 익힐 수 있었다.
   - 외부 서버랑 통신할 때는 데이터를 받아오기 전까지 찰나의 대기 시간이 생기는데, `isLoading` 반응형 변수를 둬서 로딩 안내를 띄우고 `try...catch`로 실패했을 때 안내 메시지를 보여주는 예외 처리의 중요성을 배웠다.
+
+---
+
+#### 🎨 7) 과제 7: Weather UI Library ([07_weather_ui_library](src/components/practices/assignments/07_weather_ui_library/))
+
+- **교재**: PDF 249p (Hands on - Weather UI Library)
+- **진행한 내용**:
+  - **Element Plus 라이브러리 도입**: `npm install element-plus` 후 `main.js`에 전역 등록 및 테마 CSS 연동
+  - **컴포넌트 현대화**:
+    - `BaseDashboardCard`: `<el-card shadow="hover">`로 교체하여 부드러운 그림자와 둥근 모서리 디자인 적용
+    - `SearchBar`: `<el-input size="large" clearable>`로 교체하여 한 번에 검색어를 비울 수 있는 인터랙션 적용
+    - `WeatherCard`: `<el-tag>` 뱃지(더움/선선함)와 `<el-button>`으로 카드 시각화
+    - `UnitToggler`: 단위 전환 시 `ElMessage.info()` 토스트 알림 팝업 연동
+  - **뷰 고도화**:
+    - `WeatherHomeView`: 조언 알림창(`<el-alert>`), 로딩 스켈레톤(`<el-skeleton>`), 빈 검색 결과 화면(`<el-empty>`), 새로고침 완료 토스트(`<ElMessage.success>`) 적용
+    - `WeatherDetailView`: `<el-descriptions>`로 상세 관측 지표 표를 깔끔하게 정돈하고, 실시간 습도 수치를 게이지 바(`<el-progress>`)로 시각화
+    - `WeatherStatsView`: 전국 기온 지표 통계 카드(`<el-statistic>`)와 스트라이프 랭킹 테이블(`<el-table>`)로 전면 개편
+    - `WeatherAboutView`: 프로젝트 1일차부터 7일차까지의 발전 과정을 타임라인(`<el-timeline>`)으로 시각화
+    - `NotFoundView`: `<el-result icon="warning">` 404 상태 페이지 적용
+- **느낀 점**:
+  - 일일이 CSS를 짜지 않고도 Element Plus의 완성형 컴포넌트들을 가져다 조립하니까 개발 속도가 훨씬 빨라지고, 순식간에 전문 디자이너가 작업한 것 같은 엔터프라이즈급 대시보드 느낌이 났다.
+  - 특히 상세 화면에서 습도를 `<el-progress>` 게이지 바로 보여주고, 데이터 로딩 중에 `<el-skeleton>` 애니메이션이 뜨는 걸 보면서 왜 실무에서 UI 라이브러리를 적극적으로 쓰는지 제대로 체감했다.

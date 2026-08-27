@@ -6,7 +6,7 @@ const routes = [
     name: 'WeatherHome',
     component: () =>
       import(
-        '@/components/practices/assignments/06_weather_axios/views/WeatherHomeView.vue'
+        '@/components/practices/assignments/07_weather_ui_library/views/WeatherHomeView.vue'
       ),
   },
   {
@@ -14,7 +14,7 @@ const routes = [
     name: 'WeatherDetail',
     component: () =>
       import(
-        '@/components/practices/assignments/06_weather_axios/views/WeatherDetailView.vue'
+        '@/components/practices/assignments/07_weather_ui_library/views/WeatherDetailView.vue'
       ),
   },
   {
@@ -22,7 +22,7 @@ const routes = [
     name: 'WeatherAbout',
     component: () =>
       import(
-        '@/components/practices/assignments/06_weather_axios/views/WeatherAboutView.vue'
+        '@/components/practices/assignments/07_weather_ui_library/views/WeatherAboutView.vue'
       ),
   },
   {
@@ -30,7 +30,7 @@ const routes = [
     name: 'WeatherStats',
     component: () =>
       import(
-        '@/components/practices/assignments/06_weather_axios/views/WeatherStatsView.vue'
+        '@/components/practices/assignments/07_weather_ui_library/views/WeatherStatsView.vue'
       ),
   },
   {
@@ -38,7 +38,7 @@ const routes = [
     name: 'NotFound',
     component: () =>
       import(
-        '@/components/practices/assignments/06_weather_axios/views/NotFoundView.vue'
+        '@/components/practices/assignments/07_weather_ui_library/views/NotFoundView.vue'
       ),
   },
 ]
