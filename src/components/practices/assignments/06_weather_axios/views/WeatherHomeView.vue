@@ -8,7 +8,7 @@ import WeatherCard from '../components/WeatherCard.vue'
 
 const router = useRouter()
 
-const USER_API_KEY = '30985f709248fb2218e4b0910b2e44d9'
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY || '30985f709248fb2218e4b0910b2e44d9'
 const FALLBACK_API_KEY = '8964edc63b366d27b5b728b7976570b7'
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
 const ADVICE_API_URL = 'https://api.adviceslip.com/advice'
@@ -51,7 +51,7 @@ const fetchRealTimeWeather = async () => {
   isLoading.value = true
   errorMessage.value = ''
   try {
-    weatherList.value = await fetchCityWeather(USER_API_KEY)
+    weatherList.value = await fetchCityWeather(API_KEY)
   } catch {
     try {
       weatherList.value = await fetchCityWeather(FALLBACK_API_KEY)

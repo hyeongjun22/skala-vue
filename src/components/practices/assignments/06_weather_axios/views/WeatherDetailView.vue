@@ -9,7 +9,7 @@ const route = useRoute()
 const router = useRouter()
 const configStore = useConfigStore()
 
-const USER_API_KEY = '30985f709248fb2218e4b0910b2e44d9'
+const API_KEY = import.meta.env.VITE_WEATHER_API_KEY || '30985f709248fb2218e4b0910b2e44d9'
 const FALLBACK_API_KEY = '8964edc63b366d27b5b728b7976570b7'
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
@@ -52,7 +52,7 @@ const loadCityData = async () => {
   isLoading.value = true
   errorMessage.value = ''
   try {
-    await fetchDetail(USER_API_KEY, target.queryName, target.name)
+    await fetchDetail(API_KEY, target.queryName, target.name)
   } catch {
     try {
       await fetchDetail(FALLBACK_API_KEY, target.queryName, target.name)

@@ -34,6 +34,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY || '30985f709248fb2218e4b0910b2e44d9' }}
 
       - name: SPA 404 fallback for GitHub Pages
         run: cp dist/index.html dist/404.html
