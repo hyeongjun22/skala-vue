@@ -1,0 +1,13 @@
+<script setup>
+import WeatherMockup from '@/components/practices/assignments/01_weather_mockup/Weather_Mockup.vue'
+</script>
+
+<template>
+  <div class="practice-container">
+    <WeatherMockup />
+  </div>
+</template>
+
+<style>
+@import '@/assets/practice.css';
+</style>

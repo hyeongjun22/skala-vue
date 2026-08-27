@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 const count = ref(0)
-// 메서드 핸들러 함수 정의
 const showAlert = () => {
   alert('함수가 성공적으로 호출되었습니다!')
 }

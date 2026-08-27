@@ -19,6 +19,6 @@ const isVisible = ref(true)
   margin-top: 5px;
   color: white;
   border-radius: 5px;
-  background-color: #3498db; /* 파란색 */
+  background-color: #3498db;
 }
 </style>

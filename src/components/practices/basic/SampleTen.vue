@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-// v-model Modifiers 실습용 reactive 변수 선언
 const lazyText = ref('')
 const age = ref('')
 const userEmail = ref('')
@@ -11,7 +10,6 @@ const price = ref('')
 <template>
   <div class="practice-section">
     <h2>v-model 수식어 (Modifiers) 활용</h2>
-    <!-- 1) .lazy 수식어 실습 -->
     <section style="margin-bottom: 20px">
       <h3>1) .lazy 수식어 (change 이벤트 시점 반영)</h3>
       <input type="text" v-model.lazy="lazyText" placeholder="입력 후 Enter 또는 외부 클릭" />
@@ -20,7 +18,6 @@ const price = ref('')
       </p>
     </section>
 
-    <!-- 2) .number 수식어 실습 -->
     <section style="margin-bottom: 20px">
       <h3>2) .number 수식어 (Number 타입 자동 형변환)</h3>
       <input type="text" v-model="age" placeholder="나이를 입력하세요" />
@@ -32,7 +29,6 @@ const price = ref('')
       </p>
     </section>
 
-    <!-- 3) .trim 수식어 실습 -->
     <section>
       <h3>3) .trim 수식어 (양끝 공백 자동 제거)</h3>
       <input type="text" v-model="userEmail" placeholder="앞뒤 공백을 포함해 입력해 보세요" />
@@ -44,7 +40,6 @@ const price = ref('')
       </p>
     </section>
 
-    <!-- 4) 수식어 체이닝 (Chaining) 실습 -->
     <section>
       <h3>4) Chaining (수식어 체이닝: .trim.number)</h3>
       <input

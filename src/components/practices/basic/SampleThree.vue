@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-const isWarning = ref(false) // 객체 바인딩용 스위치
-const themeClass = ref('bg-dark') // 배열 바인딩용 고정 클래스
+const isWarning = ref(false)
+const themeClass = ref('bg-dark')
 </script>
 <template>
   <div class="practice-section">

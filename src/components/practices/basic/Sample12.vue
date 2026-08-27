@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-const text1 = ref('') // v-model용 변수
-const text2 = ref('') // 원리 이해용 변수
+const text1 = ref('')
+const text2 = ref('')
 const handleInput = (e) => {
   text2.value = e.target.value
 }

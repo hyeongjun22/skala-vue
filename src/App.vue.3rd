@@ -1,0 +1,13 @@
+<script setup>
+import WeatherParent from '@/components/practices/assignments/03_weather_component/WeatherParent.vue'
+</script>
+
+<template>
+  <div class="practice-container">
+    <WeatherParent />
+  </div>
+</template>
+
+<style>
+@import '@/assets/practice.css';
+</style>

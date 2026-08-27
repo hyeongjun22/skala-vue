@@ -1,0 +1,13 @@
+<script setup>
+import WeatherComposition from '@/components/practices/assignments/02_weather_composition/Weather_Composition.vue'
+</script>
+
+<template>
+  <div class="practice-container">
+    <WeatherComposition />
+  </div>
+</template>
+
+<style>
+@import '@/assets/practice.css';
+</style>
