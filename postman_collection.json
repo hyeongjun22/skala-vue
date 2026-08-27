@@ -1,0 +1,132 @@
+{
+  "info": {
+    "name": "Skala Vue Weather & CRUD API Tests",
+    "_postman_id": "skala-vue-001",
+    "description": "Postman Collection for Skala Vue Project APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. OpenWeatherMap - Seoul Weather (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=30985f709248fb2218e4b0910b2e44d9&units=metric&lang=kr",
+          "protocol": "https",
+          "host": ["api", "openweathermap", "org"],
+          "path": ["data", "2.5", "weather"],
+          "query": [
+            { "key": "q", "value": "Seoul" },
+            { "key": "appid", "value": "30985f709248fb2218e4b0910b2e44d9" },
+            { "key": "units", "value": "metric" },
+            { "key": "lang", "value": "kr" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('City name is Seoul', function () { const jsonData = pm.response.json(); pm.expect(jsonData.name).to.eql('Seoul'); });",
+              "pm.test('Temperature exists', function () { const jsonData = pm.response.json(); pm.expect(jsonData.main.temp).to.be.a('number'); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. OpenWeatherMap - Busan Weather (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/weather?q=Busan&appid=30985f709248fb2218e4b0910b2e44d9&units=metric&lang=kr",
+          "protocol": "https",
+          "host": ["api", "openweathermap", "org"],
+          "path": ["data", "2.5", "weather"],
+          "query": [
+            { "key": "q", "value": "Busan" },
+            { "key": "appid", "value": "30985f709248fb2218e4b0910b2e44d9" },
+            { "key": "units", "value": "metric" },
+            { "key": "lang", "value": "kr" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Weather description exists', function () { const jsonData = pm.response.json(); pm.expect(jsonData.weather[0].description).to.be.a('string'); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. JSONPlaceholder - Read Posts (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts?_limit=3",
+          "protocol": "https",
+          "host": ["jsonplaceholder", "typicode", "com"],
+          "path": ["posts"],
+          "query": [
+            { "key": "_limit", "value": "3" }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Returns 3 items', function () { const jsonData = pm.response.json(); pm.expect(jsonData.length).to.eql(3); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. JSONPlaceholder - Create Post (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\": \"Skala Vue Test Post\", \"body\": \"Testing with Postman\", \"userId\": 1}"
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "protocol": "https",
+          "host": ["jsonplaceholder", "typicode", "com"],
+          "path": ["posts"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 201 Created', function () { pm.response.to.have.status(201); });",
+              "pm.test('Created post has id 101', function () { const jsonData = pm.response.json(); pm.expect(jsonData.id).to.eql(101); });"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -11,6 +11,7 @@ const router = useRouter()
 const USER_API_KEY = '30985f709248fb2218e4b0910b2e44d9'
 const FALLBACK_API_KEY = '8964edc63b366d27b5b728b7976570b7'
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
+const ADVICE_API_URL = 'https://api.adviceslip.com/advice'
 
 const cityList = [
   { id: 'city_01', name: '서울', queryName: 'Seoul' },
@@ -25,6 +26,10 @@ const searchQuery = ref('')
 const selectedCityInfo = ref('카드를 클릭하거나 검색해 보세요.')
 const isLoading = ref(false)
 const errorMessage = ref('')
+
+const adviceText = ref('')
+const adviceId = ref(null)
+const isAdviceLoading = ref(false)
 
 const fetchCityWeather = async (apiKey) => {
   const requests = cityList.map((city) =>
@@ -58,8 +63,23 @@ const fetchRealTimeWeather = async () => {
   }
 }
 
+const fetchDailyAdvice = async () => {
+  isAdviceLoading.value = true
+  try {
+    const res = await axios.get(ADVICE_API_URL)
+    adviceText.value = res.data.slip.advice
+    adviceId.value = res.data.slip.id
+  } catch (err) {
+    adviceText.value = 'Always believe that something wonderful is about to happen.'
+    adviceId.value = null
+  } finally {
+    isAdviceLoading.value = false
+  }
+}
+
 onMounted(() => {
   fetchRealTimeWeather()
+  fetchDailyAdvice()
 })
 
 const filteredWeatherList = computed(() => {
@@ -88,6 +108,21 @@ const handleShowDetail = (cityId) => {
         :current-query="searchQuery"
         @update-query="(val) => (searchQuery = val)"
       />
+    </BaseDashboardCard>
+
+    <BaseDashboardCard>
+      <div class="advice-header">
+        <h4>💡 오늘의 날씨 & 라이프 조언 (Advice Slip API)</h4>
+        <button class="btn-advice" @click="fetchDailyAdvice" :disabled="isAdviceLoading">
+          {{ isAdviceLoading ? '조언 받는 중...' : '🎲 다른 조언 뽑기' }}
+        </button>
+      </div>
+      <blockquote class="advice-quote">
+        "{{ adviceText || '오늘도 맑고 기분 좋은 하루 보내세요!' }}"
+      </blockquote>
+      <div v-if="adviceId" class="advice-footer">
+        <span class="advice-badge">#Advice No.{{ adviceId }}</span>
+      </div>
     </BaseDashboardCard>
 
     <BaseDashboardCard>
@@ -132,6 +167,55 @@ const handleShowDetail = (cityId) => {
 .dashboard-wrapper {
   width: 600px;
   margin: 0 auto;
+}
+.advice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.advice-header h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 14px;
+}
+.btn-advice {
+  padding: 4px 8px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+}
+.btn-advice:hover {
+  background-color: #059669;
+}
+.btn-advice:disabled {
+  background-color: #a7f3d0;
+  cursor: not-allowed;
+}
+.advice-quote {
+  margin: 8px 0;
+  padding: 10px 14px;
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+  border-radius: 4px;
+  font-style: italic;
+  color: #065f46;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.advice-footer {
+  text-align: right;
+}
+.advice-badge {
+  font-size: 11px;
+  color: #6ee7b7;
+  background: #064e3b;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 .list-header {
   display: flex;
