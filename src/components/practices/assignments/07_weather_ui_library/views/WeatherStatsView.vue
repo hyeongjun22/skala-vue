@@ -44,10 +44,10 @@ const loadStats = async () => {
   errorMessage.value = ''
   try {
     weatherList.value = await fetchStatsData(USER_API_KEY)
-  } catch (err) {
+  } catch {
     try {
       weatherList.value = await fetchStatsData(FALLBACK_API_KEY)
-    } catch (fallbackErr) {
+    } catch {
       errorMessage.value = '통계 데이터를 수신하지 못했습니다.'
     }
   } finally {
@@ -133,7 +133,9 @@ const handleDetail = (cityId) => {
           </el-card>
         </div>
 
-        <h3 style="margin-top: 25px; margin-bottom: 12px; color: #303133">🏆 실시간 기온 랭킹 리포트</h3>
+        <h3 style="margin-top: 25px; margin-bottom: 12px; color: #303133">
+          🏆 실시간 기온 랭킹 리포트
+        </h3>
 
         <el-table :data="sortedList" stripe style="width: 100%; border-radius: 8px">
           <el-table-column type="index" label="순위" width="80" align="center">
@@ -159,7 +161,8 @@ const handleDetail = (cityId) => {
           <el-table-column label="현재 기온" align="right" width="120">
             <template #default="scope">
               <span style="font-weight: bold; color: #409eff">
-                {{ configStore.convertTemp(Math.round(scope.row.temp)) }}{{ configStore.unitSymbol }}
+                {{ configStore.convertTemp(Math.round(scope.row.temp))
+                }}{{ configStore.unitSymbol }}
               </span>
             </template>
           </el-table-column>

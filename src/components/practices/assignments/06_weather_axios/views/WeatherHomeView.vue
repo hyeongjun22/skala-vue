@@ -52,11 +52,12 @@ const fetchRealTimeWeather = async () => {
   errorMessage.value = ''
   try {
     weatherList.value = await fetchCityWeather(USER_API_KEY)
-  } catch (err) {
+  } catch {
     try {
       weatherList.value = await fetchCityWeather(FALLBACK_API_KEY)
-    } catch (fallbackErr) {
-      errorMessage.value = '실시간 날씨 데이터를 가져오는데 실패했습니다. 네트워크 및 API 키를 확인해주세요.'
+    } catch {
+      errorMessage.value =
+        '실시간 날씨 데이터를 가져오는데 실패했습니다. 네트워크 및 API 키를 확인해주세요.'
     }
   } finally {
     isLoading.value = false
@@ -69,7 +70,7 @@ const fetchDailyAdvice = async () => {
     const res = await axios.get(ADVICE_API_URL)
     adviceText.value = res.data.slip.advice
     adviceId.value = res.data.slip.id
-  } catch (err) {
+  } catch {
     adviceText.value = 'Always believe that something wonderful is about to happen.'
     adviceId.value = null
   } finally {
@@ -104,10 +105,7 @@ const handleShowDetail = (cityId) => {
 <template>
   <div class="dashboard-wrapper">
     <BaseDashboardCard>
-      <SearchBar
-        :current-query="searchQuery"
-        @update-query="(val) => (searchQuery = val)"
-      />
+      <SearchBar :current-query="searchQuery" @update-query="(val) => (searchQuery = val)" />
     </BaseDashboardCard>
 
     <BaseDashboardCard>

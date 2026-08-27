@@ -14,7 +14,9 @@ onMounted(() => {
 })
 
 onUpdated(() => {
-  console.log(`3. [onUpdated] 데이터가 변경되어 화면을 새로 그렸습니다. (현재 count: ${count.value})`)
+  console.log(
+    `3. [onUpdated] 데이터가 변경되어 화면을 새로 그렸습니다. (현재 count: ${count.value})`,
+  )
 })
 
 onUnmounted(() => {

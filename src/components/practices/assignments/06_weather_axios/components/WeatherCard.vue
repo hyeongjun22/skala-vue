@@ -38,12 +38,7 @@ const displayTemp = computed(() => {
     <span v-if="cityItem.temp >= 25" class="badge hot">🔥 더움</span>
     <span v-else class="badge cool">❄️ 선선함</span>
 
-    <button
-      class="btn-detail"
-      @click.stop="emit('click-detail', cityItem.id)"
-    >
-      상세보기
-    </button>
+    <button class="btn-detail" @click.stop="emit('click-detail', cityItem.id)">상세보기</button>
   </div>
 </template>
 
@@ -56,7 +51,9 @@ const displayTemp = computed(() => {
   border-radius: 6px;
   cursor: pointer;
   position: relative;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 .weather-card:hover {
   transform: translateY(-2px);

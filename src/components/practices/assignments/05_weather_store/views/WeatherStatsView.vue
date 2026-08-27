@@ -59,13 +59,15 @@ const handleDetail = (cityId) => {
         <div class="summary-card hot-card">
           <span class="label">🔥 최고 기온 도시</span>
           <strong class="val">
-            {{ highestCity.name }} ({{ configStore.convertTemp(highestCity.temp) }}{{ configStore.unitSymbol }})
+            {{ highestCity.name }} ({{ configStore.convertTemp(highestCity.temp)
+            }}{{ configStore.unitSymbol }})
           </strong>
         </div>
         <div class="summary-card cool-card">
           <span class="label">❄️ 최저 기온 도시</span>
           <strong class="val">
-            {{ lowestCity.name }} ({{ configStore.convertTemp(lowestCity.temp) }}{{ configStore.unitSymbol }})
+            {{ lowestCity.name }} ({{ configStore.convertTemp(lowestCity.temp)
+            }}{{ configStore.unitSymbol }})
           </strong>
         </div>
       </div>
@@ -81,7 +83,9 @@ const handleDetail = (cityId) => {
           >
             <span class="rank">{{ index + 1 }}위</span>
             <span class="city-name">{{ item.name }} ({{ item.status }})</span>
-            <span class="temp">{{ configStore.convertTemp(item.temp) }}{{ configStore.unitSymbol }}</span>
+            <span class="temp"
+              >{{ configStore.convertTemp(item.temp) }}{{ configStore.unitSymbol }}</span
+            >
             <button class="btn-sm">상세보기</button>
           </li>
         </ul>

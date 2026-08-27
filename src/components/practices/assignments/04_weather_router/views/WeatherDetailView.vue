@@ -15,7 +15,8 @@ const mockCityDetails = {
     humidity: 45,
     windSpeed: 2.1,
     dust: '좋음 (18㎍/㎥)',
-    description: '쾌청한 날씨가 지속되고 있으며 야외 활동에 적합합니다. 자외선 지수가 다소 높으니 선크림을 챙기세요.',
+    description:
+      '쾌청한 날씨가 지속되고 있으며 야외 활동에 적합합니다. 자외선 지수가 다소 높으니 선크림을 챙기세요.',
   },
   city_02: {
     id: 'city_02',
@@ -25,7 +26,8 @@ const mockCityDetails = {
     humidity: 85,
     windSpeed: 3.5,
     dust: '좋음 (12㎍/㎥)',
-    description: '오후까지 비가 이어질 예정입니다. 빗길 안전운전에 유의하시고 외출 시 우산을 준비하세요.',
+    description:
+      '오후까지 비가 이어질 예정입니다. 빗길 안전운전에 유의하시고 외출 시 우산을 준비하세요.',
   },
   city_03: {
     id: 'city_03',
@@ -55,7 +57,8 @@ const mockCityDetails = {
     humidity: 50,
     windSpeed: 6.0,
     dust: '좋음 (10㎍/㎥)',
-    description: '동해안을 따라 강한 바람이 불고 있으니 시설물 관리 및 안전사고에 주의하시기 바랍니다.',
+    description:
+      '동해안을 따라 강한 바람이 불고 있으니 시설물 관리 및 안전사고에 주의하시기 바랍니다.',
   },
 }
 

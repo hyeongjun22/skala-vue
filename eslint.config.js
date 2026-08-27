@@ -11,7 +11,7 @@ export default defineConfig([
     files: ['**/*.{vue,js,mjs,jsx}'],
   },
 
-  globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
+  globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**', '**/example/**']),
 
   {
     languageOptions: {
@@ -25,6 +25,16 @@ export default defineConfig([
   ...pluginVue.configs['flat/essential'],
 
   ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
+
+  {
+    name: 'app/custom-rules',
+    rules: {
+      'eqeqeq': ['error', 'always'],
+      'no-console': 'off',
+      'vue/multi-word-component-names': 'off',
+      'no-unused-vars': 'warn',
+    },
+  },
 
   skipFormatting,
 ])

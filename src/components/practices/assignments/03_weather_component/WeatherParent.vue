@@ -38,10 +38,7 @@ const showDetail = (cityName, status) => {
 <template>
   <div class="dashboard-wrapper">
     <BaseDashboardCard>
-      <SearchBar
-        :query="searchQuery"
-        @update-query="(val) => (searchQuery = val)"
-      />
+      <SearchBar :query="searchQuery" @update-query="(val) => (searchQuery = val)" />
     </BaseDashboardCard>
 
     <BaseDashboardCard>

@@ -39,12 +39,13 @@
 | **AxiosWeather.vue**                             | Axios 단발성 GET 통신       | OpenWeatherMap API로 실시간 날씨 데이터 비동기 호출 및 상태 표시       |
 | **AxiosJson.vue**                                | REST API CRUD               | JSONPlaceholder 가상 백엔드 대상 GET, POST, PUT, DELETE 실습           |
 | **ElementPlus.vue**                              | UI 컴포넌트 라이브러리      | Form, Input-Number, Rate, MessageBox, Progress 등 UI 부품 실습         |
+| **BuildDeployment.vue**                          | 빌드 & 배포 환경 검증        | ESLint 규칙 검증, Prettier 자동 서식, Vite 모드별 .env 환경 변수 실습  |
 
 ---
 
 ### 2. 과제 및 실습 기록 (Hands-on)
 
-#### 🌤️ 1) 과제 1: Weather Mockup ([Weather_Mockup.vue](src/components/practices/assignments/01_weather_mockup/Weather_Mockup.vue))
+#### 1) 과제 1: Weather Mockup ([Weather_Mockup.vue](src/components/practices/assignments/01_weather_mockup/Weather_Mockup.vue))
 
 - **진행한 내용**:
   weatherList 배열을 v-for로 돌려서 날씨 카드 목록 렌더링하였고 v-if 써서 더움/선선함을 표시했다. 한글을 검색할 때 글자가 밀리는 문제 때문에 v-model 대신 :value랑 @input를 사용하였다.
@@ -57,7 +58,7 @@
 
 ---
 
-#### ⚡ 2) 과제 2: Weather Composition ([Weather_Composition.vue](src/components/practices/assignments/02_weather_composition/Weather_Composition.vue))
+#### 2) 과제 2: Weather Composition ([Weather_Composition.vue](src/components/practices/assignments/02_weather_composition/Weather_Composition.vue))
 
 - **진행한 내용**:
   ref()를 선언하여 반응형 상태를 관리하였다. 도시 이름을 입력할 때마다 실시간으로 목록이 걸러지도록 computed()로 filteredWeatherList를 구현하였고 watch와 watchEffect를 활용해 실시간 검색어를 추적하였다.
@@ -69,7 +70,7 @@
 
 ---
 
-#### 🧩 3) 과제 3: Weather Component ([WeatherParent.vue](src/components/practices/assignments/03_weather_component/WeatherParent.vue))
+#### 3) 과제 3: Weather Component ([WeatherParent.vue](src/components/practices/assignments/03_weather_component/WeatherParent.vue))
 
 - **진행한 내용**:
   한 파일에 모여있던 코드를 4개의 컴포넌트로 분리하였다. BaseDashboardCard는 slot을 이용해 공통 카드 틀로 재사용하였고 자식 컴포넌트들은 props와 emit으로 부모와 데이터를 주고받도록했다.
@@ -81,7 +82,7 @@
 
 ---
 
-#### 🚀 4) 과제 4: Weather Router ([04_weather_router](src/components/practices/assignments/04_weather_router/))
+#### 4) 과제 4: Weather Router ([04_weather_router](src/components/practices/assignments/04_weather_router/))
 
 - **진행한 내용**:
   Vue Router를 도입하여 페이지 새로고침 없이 상단 메뉴를 누르면 화면만 렌더링되도록 구성했다. 메인 카드에서 상세보기 버튼을 누르면 router.push()로 이동하고 상세 페이지에서는 :cityId 파라미터를 받아 해당 도시의 정보를 동적으로 보여준다.
@@ -93,7 +94,7 @@
 
 ---
 
-#### 🏪 5) 과제 5: Weather Store ([05_weather_store](src/components/practices/assignments/05_weather_store/))
+#### 5) 과제 5: Weather Store ([05_weather_store](src/components/practices/assignments/05_weather_store/))
 
 - **진행한 내용**:
   Pinia를 이용해 configStore를 생성하고 온도 단위 ,기호, 단위 변환 함수를 전역으로 관리하였다. 상단 네비게이션에 버튼을 배치하여 버튼 클릭 시 섭씨와 화씨가 서로 바뀌도록 하였다.
@@ -105,7 +106,7 @@
 
 ---
 
-#### 🌐 6) 과제 6: Weather Axios ([06_weather_axios](src/components/practices/assignments/06_weather_axios/))
+#### 6) 과제 6: Weather Axios ([06_weather_axios](src/components/practices/assignments/06_weather_axios/))
 
 - **진행한 내용**:
   발급받은 OpenWeatherMap API 키를 연동하여 도시의 실시간 기상 관측 데이터를 Promise.all로 병렬 호출하였다. 데이터 수신 중에는 isLoading으로 로딩 상태를 표시하고, try-catch로 통신 에러를 처리하였다.
@@ -117,7 +118,7 @@
 
 ---
 
-#### 🎨 7) 과제 7: Weather UI Library ([07_weather_ui_library](src/components/practices/assignments/07_weather_ui_library/))
+#### 7) 과제 7: Weather UI Library ([07_weather_ui_library](src/components/practices/assignments/07_weather_ui_library/))
 
 - **진행한 내용**:
   Element Plus UI 라이브러리를 설치하고 전역 등록하여 기본 HTML 태그들을 완성형 UI 컴포넌트로 교체하였다. el-card로 카드 그림자를 주고, el-input(clearable), el-tag, el-button, el-descriptions, el-statistic, el-table 등을 적용하여 대시보드 화면을 전면 고도화하였다.

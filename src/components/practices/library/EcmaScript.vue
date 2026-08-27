@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-
 const result1 = ref('')
 const result2 = ref('')
 const result3 = ref('')
@@ -10,15 +9,12 @@ const runTask1 = () => {
   const members = ['김수원', '이서울', '박부산', '최대전']
   const rawData = { id: 101, grade: 'VIP', details: { score: 95 } }
 
-
   const memberContainsPark = members.includes('박부산')
-
 
   const {
     grade,
     details: { score },
   } = rawData
-
 
   result1.value = `부산 포함 여부: ${memberContainsPark} / 등급: ${grade} / 점수: ${score}점`
 }
@@ -27,40 +23,29 @@ const runTask2 = () => {
   const currentCart = ['Apple', 'Banana']
   const newProduct = { name: 'Orange', stock: 0, preview: null }
 
-
   const updatedCart = [...currentCart, newProduct.name]
-
 
   const imgStatus = newProduct?.preview ?? '이미지 준비중'
 
-
   const finalStock = newProduct.stock ?? 10
-
 
   result2.value = `카트: ${updatedCart} / 이미지: ${imgStatus} / 수량: ${finalStock}개`
 }
 
-
-
-
-
 const fetchUserId = () => new Promise((res) => setTimeout(() => res({ uid: 777 }), 400))
-const fetchUserProfile = (uid) => new Promise((res) => setTimeout(() => res({ uid, nick: 'Graves' }), 400))
+const fetchUserProfile = (uid) =>
+  new Promise((res) => setTimeout(() => res({ uid, nick: 'Graves' }), 400))
 
 const runTask3 = async () => {
   result3.value = '⏳ 데이터 동기화 중...'
 
-
   try {
-
     const { uid } = await fetchUserId()
-
 
     const { nick } = await fetchUserProfile(uid)
 
-
     result3.value = `동기화 성공: ${nick}님 환영합니다.`
-  } catch (error) {
+  } catch {
     result3.value = '통신 실패'
   }
 }

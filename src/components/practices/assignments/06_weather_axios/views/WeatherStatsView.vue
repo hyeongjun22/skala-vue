@@ -44,10 +44,10 @@ const loadStats = async () => {
   errorMessage.value = ''
   try {
     weatherList.value = await fetchStatsData(USER_API_KEY)
-  } catch (err) {
+  } catch {
     try {
       weatherList.value = await fetchStatsData(FALLBACK_API_KEY)
-    } catch (fallbackErr) {
+    } catch {
       errorMessage.value = '통계 데이터를 수신하지 못했습니다.'
     }
   } finally {
@@ -116,13 +116,15 @@ const handleDetail = (cityId) => {
           <div class="summary-card hot-card">
             <span class="label">🔥 최고 기온 도시</span>
             <strong class="val">
-              {{ highestCity.name }} ({{ configStore.convertTemp(Math.round(highestCity.temp)) }}{{ configStore.unitSymbol }})
+              {{ highestCity.name }} ({{ configStore.convertTemp(Math.round(highestCity.temp))
+              }}{{ configStore.unitSymbol }})
             </strong>
           </div>
           <div class="summary-card cool-card">
             <span class="label">❄️ 최저 기온 도시</span>
             <strong class="val">
-              {{ lowestCity.name }} ({{ configStore.convertTemp(Math.round(lowestCity.temp)) }}{{ configStore.unitSymbol }})
+              {{ lowestCity.name }} ({{ configStore.convertTemp(Math.round(lowestCity.temp))
+              }}{{ configStore.unitSymbol }})
             </strong>
           </div>
         </div>
@@ -138,7 +140,10 @@ const handleDetail = (cityId) => {
             >
               <span class="rank">{{ index + 1 }}위</span>
               <span class="city-name">{{ item.name }} ({{ item.status }})</span>
-              <span class="temp">{{ configStore.convertTemp(Math.round(item.temp)) }}{{ configStore.unitSymbol }}</span>
+              <span class="temp"
+                >{{ configStore.convertTemp(Math.round(item.temp))
+                }}{{ configStore.unitSymbol }}</span
+              >
               <button class="btn-sm">상세보기</button>
             </li>
           </ul>

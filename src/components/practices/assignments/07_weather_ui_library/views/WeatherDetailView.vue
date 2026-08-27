@@ -26,9 +26,7 @@ const isLoading = ref(false)
 const errorMessage = ref('')
 
 const fetchDetail = async (apiKey, queryName, koreanName) => {
-  const res = await axios.get(
-    `${BASE_URL}?q=${queryName}&appid=${apiKey}&units=metric&lang=kr`,
-  )
+  const res = await axios.get(`${BASE_URL}?q=${queryName}&appid=${apiKey}&units=metric&lang=kr`)
   const raw = res.data
   cityData.value = {
     name: koreanName,
@@ -55,10 +53,10 @@ const loadCityData = async () => {
   errorMessage.value = ''
   try {
     await fetchDetail(USER_API_KEY, target.queryName, target.name)
-  } catch (err) {
+  } catch {
     try {
       await fetchDetail(FALLBACK_API_KEY, target.queryName, target.name)
-    } catch (fallbackErr) {
+    } catch {
       errorMessage.value = '실시간 상세 기상 데이터를 가져오지 못했습니다.'
     }
   } finally {

@@ -19,7 +19,9 @@ const emit = defineEmits(['update-query'])
         @input="emit('update-query', $event.target.value)"
         placeholder="검색할 도시 이름 입력"
       />
-      <button v-if="query" class="btn-clear" @click="emit('update-query', '')" type="button">✕</button>
+      <button v-if="query" class="btn-clear" @click="emit('update-query', '')" type="button">
+        ✕
+      </button>
     </div>
     <p>
       검색 중인 도시: <strong>{{ query || '전체' }}</strong>

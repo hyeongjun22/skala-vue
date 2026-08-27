@@ -56,7 +56,9 @@ const weatherThemeClass = computed(() => {
       />
       <div class="card-info">
         <span class="city-name">{{ cityItem.name }} ({{ cityItem.status }})</span>
-        <span class="temp-text">현재 기온: <strong>{{ displayTemp }}{{ configStore.unitSymbol }}</strong></span>
+        <span class="temp-text"
+          >현재 기온: <strong>{{ displayTemp }}{{ configStore.unitSymbol }}</strong></span
+        >
       </div>
     </div>
 
@@ -65,11 +67,7 @@ const weatherThemeClass = computed(() => {
         {{ cityItem.temp >= 25 ? '🔥 더움' : '❄️ 선선함' }}
       </el-tag>
 
-      <el-button
-        type="primary"
-        size="small"
-        @click.stop="emit('click-detail', cityItem.id)"
-      >
+      <el-button type="primary" size="small" @click.stop="emit('click-detail', cityItem.id)">
         상세보기
       </el-button>
     </div>

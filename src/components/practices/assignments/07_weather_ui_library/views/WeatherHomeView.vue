@@ -71,14 +71,15 @@ const fetchRealTimeWeather = async (showToast = false) => {
     if (showToast) {
       ElMessage.success('실시간 기상 데이터가 성공적으로 갱신되었습니다!')
     }
-  } catch (err) {
+  } catch {
     try {
       weatherList.value = await fetchCityWeather(FALLBACK_API_KEY)
       if (showToast) {
         ElMessage.success('실시간 기상 데이터를 성공적으로 수신했습니다.')
       }
-    } catch (fallbackErr) {
-      errorMessage.value = '실시간 날씨 데이터를 가져오는데 실패했습니다. 네트워크 및 API 키를 확인해주세요.'
+    } catch {
+      errorMessage.value =
+        '실시간 날씨 데이터를 가져오는데 실패했습니다. 네트워크 및 API 키를 확인해주세요.'
       ElMessage.error('날씨 데이터 동기화에 실패했습니다.')
     }
   } finally {
@@ -92,7 +93,7 @@ const fetchDailyAdvice = async () => {
     const res = await axios.get(ADVICE_API_URL)
     adviceText.value = res.data.slip.advice
     ElMessage.success('오늘의 라이프스타일 조언을 새로고침했습니다!')
-  } catch (err) {
+  } catch {
     adviceText.value = 'Always believe that something wonderful is about to happen.'
   } finally {
     isAdviceLoading.value = false
@@ -126,10 +127,7 @@ const handleShowDetail = (cityId) => {
 <template>
   <div class="dashboard-wrapper">
     <BaseDashboardCard>
-      <SearchBar
-        :current-query="searchQuery"
-        @update-query="(val) => (searchQuery = val)"
-      />
+      <SearchBar :current-query="searchQuery" @update-query="(val) => (searchQuery = val)" />
     </BaseDashboardCard>
 
     <BaseDashboardCard>

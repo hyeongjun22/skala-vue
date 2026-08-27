@@ -21,10 +21,21 @@ const handleGoHome = () => {
         <h3>✨ 주요 기능 안내</h3>
         <ul class="feature-list">
           <li><strong>🔍 실시간 도시 검색:</strong> 한글 입력 최적화 및 양방향 이벤트 바인딩</li>
-          <li><strong>🏙️ 지역별 날씨 모니터링:</strong> 반응형 카드 UI 및 기온별 직관적 뱃지 표시</li>
-          <li><strong>📍 상세 기상 정보 조회:</strong> 동적 라우팅(`:cityId`)을 통한 도시별 습도, 풍속, 미세먼지 관측 정보 제공</li>
-          <li><strong>⚡ SPA 빠른 화면 전환:</strong> Vue Router 기반 비동기 지연 로딩(Lazy Loading) 적용</li>
-          <li><strong>🌡️ 전역 단위 변경(Pinia):</strong> 섭씨(℃) / 화씨(℉) 전역 상태 스위칭 및 실시간 환산</li>
+          <li>
+            <strong>🏙️ 지역별 날씨 모니터링:</strong> 반응형 카드 UI 및 기온별 직관적 뱃지 표시
+          </li>
+          <li>
+            <strong>📍 상세 기상 정보 조회:</strong> 동적 라우팅(`:cityId`)을 통한 도시별 습도,
+            풍속, 미세먼지 관측 정보 제공
+          </li>
+          <li>
+            <strong>⚡ SPA 빠른 화면 전환:</strong> Vue Router 기반 비동기 지연 로딩(Lazy Loading)
+            적용
+          </li>
+          <li>
+            <strong>🌡️ 전역 단위 변경(Pinia):</strong> 섭씨(℃) / 화씨(℉) 전역 상태 스위칭 및 실시간
+            환산
+          </li>
         </ul>
       </div>
 

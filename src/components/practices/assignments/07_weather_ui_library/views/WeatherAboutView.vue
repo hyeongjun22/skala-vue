@@ -15,7 +15,10 @@ const timelineActivities = [
   { content: '4단계: Weather Router (SPA 페이지 전환 & 동적 라우팅)', timestamp: 'Day 4' },
   { content: '5단계: Weather Store (Pinia 전역 단위 변환 상태 관리)', timestamp: 'Day 5' },
   { content: '6단계: Weather Axios (OpenWeatherMap & Advice 실시간 API 연동)', timestamp: 'Day 6' },
-  { content: '7단계: Weather UI Library (Element Plus 풀스택 대시보드 고도화)', timestamp: 'Day 7 (완성)' },
+  {
+    content: '7단계: Weather UI Library (Element Plus 풀스택 대시보드 고도화)',
+    timestamp: 'Day 7 (완성)',
+  },
 ]
 </script>
 

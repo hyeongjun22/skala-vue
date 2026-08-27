@@ -20,20 +20,44 @@ const handleGoHome = () => {
       <div class="feature-section">
         <h3>✨ 프로젝트 핵심 아키텍처 및 기능</h3>
         <ul class="feature-list">
-          <li><strong>📡 Axios 실시간 기상 API:</strong> OpenWeatherMap 글로벌 기상청 서버와 통신하여 전국 5개 도시의 실시간 기상 관측 정보 렌더링</li>
-          <li><strong>💡 일상 조언 및 명언 API:</strong> Advice Slip REST API를 연동하여 날씨에 어울리는 라이프스타일 조언 및 새로고침(🎲) 제공</li>
-          <li><strong>🔍 실시간 도시 검색:</strong> 양방향 이벤트 바인딩 및 원클릭 초기화(✕) 지원</li>
-          <li><strong>📍 상세 기상 정보 조회:</strong> 동적 라우팅(`:cityId`)을 통한 도시별 체감온도, 습도, 풍속, 기압 상세 관측 데이터 제공</li>
-          <li><strong>🌡️ 전역 단위 변경 (Pinia):</strong> 섭씨(℃) / 화씨(℉) 전역 스토어 실시간 스위칭 및 자동 환산</li>
-          <li><strong>⚡ SPA 빠른 화면 전환:</strong> Vue Router 비동기 지연 로딩(Lazy Loading) 및 404 예외 처리</li>
+          <li>
+            <strong>📡 Axios 실시간 기상 API:</strong> OpenWeatherMap 글로벌 기상청 서버와 통신하여
+            전국 5개 도시의 실시간 기상 관측 정보 렌더링
+          </li>
+          <li>
+            <strong>💡 일상 조언 및 명언 API:</strong> Advice Slip REST API를 연동하여 날씨에
+            어울리는 라이프스타일 조언 및 새로고침(🎲) 제공
+          </li>
+          <li>
+            <strong>🔍 실시간 도시 검색:</strong> 양방향 이벤트 바인딩 및 원클릭 초기화(✕) 지원
+          </li>
+          <li>
+            <strong>📍 상세 기상 정보 조회:</strong> 동적 라우팅(`:cityId`)을 통한 도시별 체감온도,
+            습도, 풍속, 기압 상세 관측 데이터 제공
+          </li>
+          <li>
+            <strong>🌡️ 전역 단위 변경 (Pinia):</strong> 섭씨(℃) / 화씨(℉) 전역 스토어 실시간 스위칭
+            및 자동 환산
+          </li>
+          <li>
+            <strong>⚡ SPA 빠른 화면 전환:</strong> Vue Router 비동기 지연 로딩(Lazy Loading) 및 404
+            예외 처리
+          </li>
         </ul>
       </div>
 
       <div class="api-info-section">
         <h3>🔗 연동된 외부 오픈 API 스펙 (2종)</h3>
         <div class="api-card">
-          <p><strong>1. OpenWeatherMap API:</strong> <code>https://api.openweathermap.org/data/2.5/weather</code> (실시간 기상 데이터 및 아이콘 CDN)</p>
-          <p><strong>2. Advice Slip API:</strong> <code>https://api.adviceslip.com/advice</code> (오늘의 라이프 & 날씨 조언 API)</p>
+          <p>
+            <strong>1. OpenWeatherMap API:</strong>
+            <code>https://api.openweathermap.org/data/2.5/weather</code> (실시간 기상 데이터 및
+            아이콘 CDN)
+          </p>
+          <p>
+            <strong>2. Advice Slip API:</strong>
+            <code>https://api.adviceslip.com/advice</code> (오늘의 라이프 & 날씨 조언 API)
+          </p>
         </div>
       </div>
 

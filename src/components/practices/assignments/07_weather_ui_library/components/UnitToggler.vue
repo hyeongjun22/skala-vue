@@ -16,9 +16,7 @@ const handleToggle = () => {
     <span class="unit-text">
       단위: <strong>{{ configStore.unit === 'celsius' ? '섭씨(℃)' : '화씨(℉)' }}</strong>
     </span>
-    <el-button type="primary" plain size="small" @click="handleToggle">
-      단위 전환
-    </el-button>
+    <el-button type="primary" plain size="small" @click="handleToggle"> 단위 전환 </el-button>
   </div>
 </template>
 
